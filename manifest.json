@@ -2,6 +2,9 @@
   "name": "Sync reading history",
   "version": "0.1",
   "description": "Use URL to sync the reading progress across multiple pages.",
+  "action": {
+    "default_icon": "icon.png"
+  },
   "content_scripts": [
     {
       "js": ["UrlReading.js"],

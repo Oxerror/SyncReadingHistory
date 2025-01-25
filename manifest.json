@@ -1,0 +1,12 @@
+{
+  "name": "Sync reading history",
+  "version": "0.1",
+  "description": "Use URL to sync the reading progress across multiple pages.",
+  "content_scripts": [
+    {
+      "js": ["UrlReading.js"],
+      "matches": ["*://*/*/*"]
+    }
+  ],
+  "manifest_version": 3
+}

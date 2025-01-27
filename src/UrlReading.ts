@@ -1,4 +1,4 @@
-console.log("loading plugin");
+import { urlParameters } from "./types";
 
 function getChapterLocation(url: URL) {
   var hasNumber = /\d/;
@@ -12,7 +12,7 @@ function getChapterLocation(url: URL) {
   }
 }
 
-export function getLiteratureInfos(href: string) {
+export function getLiteratureInfos(href: string): urlParameters {
   const url = new URL(href);
   const pathname = url.pathname.split("/");
   const chapterLocation = getChapterLocation(url);
@@ -20,9 +20,6 @@ export function getLiteratureInfos(href: string) {
   if (typeof chapterLocation === "number") {
     const chapter = pathname[chapterLocation];
     const literatureName = pathname[chapterLocation - 1];
-
-    console.log("chapter", chapter);
-    console.log("literatureName", literatureName);
 
     return { chapter, literatureName }
   }

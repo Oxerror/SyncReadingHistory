@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"allowJs": true,
-    "checkJs": false,
+		"checkJs": false,
 		"allowSyntheticDefaultImports": true,
 		"allowUnreachableCode": false,
 		"emitDecoratorMetadata": true,

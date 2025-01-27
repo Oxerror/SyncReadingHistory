@@ -2,8 +2,8 @@ import { getLiteratureInfos } from "../src/UrlReading";
 
 async function run(input, output) {
     const result = getLiteratureInfos(input);
-    expect(result.chapter).toEqual(output.chapter);
-    expect(result.literatureName).toEqual(output.literatureName);
+    expect(result?.chapter).toEqual(output?.chapter);
+    expect(result?.literatureName).toEqual(output?.literatureName);
 }
 
 it('should return correct values if manga is after domain name"', async () => {
@@ -22,4 +22,10 @@ it('should return correct values if manga name contains numbers', async () => {
     await run(
         'https://x.com/b/i-became-a-level-999-mastermind-demon-king/chapter-123-be-safe-at-night',
         { chapter: "chapter-123-be-safe-at-night", literatureName: "i-became-a-level-999-mastermind-demon-king" })
+});
+
+it('should return undefined if no chapter was detected', async () => {
+    await run(
+        'https://x.com/manga/revenge-of-the-iron-blooded-sword-hound/',
+        undefined)
 });

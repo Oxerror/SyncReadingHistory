@@ -1,3 +1,3 @@
-import { getLiteratureInfos } from "./UrlReading"
+import getLiteratureInfos from "./UrlReading"
 
-getLiteratureInfos();
+getLiteratureInfos(window.location.href);

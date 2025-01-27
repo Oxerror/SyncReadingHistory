@@ -12,9 +12,8 @@ function getChapterLocation(url) {
   }
 }
 
-export function getLiteratureInfos() {
-
-  const url = new URL(window.location.href);
+function getLiteratureInfos(href) {
+  const url = new URL(href);
   const pathname = url.pathname.split("/");
   const chapterLocation = getChapterLocation(url);
 
@@ -24,6 +23,9 @@ export function getLiteratureInfos() {
 
     console.log("chapter", chapter);
     console.log("literatureName", literatureName);
-  }
 
+    return { chapter, literatureName }
+  }
 }
+
+module.exports = getLiteratureInfos;

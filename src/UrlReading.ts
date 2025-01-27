@@ -1,7 +1,7 @@
 import { urlParameters } from "./types";
 
 function getChapterLocation(url: URL) {
-  var hasNumber = /\d/;
+  const hasNumber = /\d/;
   const urlParts = url.pathname.split("/");
 
   // use for to loop through the url form the back

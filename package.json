@@ -1,0 +1,19 @@
+{
+    "name": "Sync reading history",
+    "version": "0.1.0",
+    "description": "",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack --env mode=development",
+        "prod": "webpack --env mode=production"
+    },
+    "keywords": [],
+    "author": "Fabian Amhof",
+    "license": "MIT",
+    "devDependencies": {
+        "copy-webpack-plugin": "^12.0.2",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^4.10.0"
+    }
+}

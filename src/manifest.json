@@ -7,8 +7,12 @@
   },
   "content_scripts": [
     {
-      "js": ["UrlReading.js"],
-      "matches": ["*://*/*/*"]
+      "js": [
+        "main.js"
+      ],
+      "matches": [
+        "*://*/*/*"
+      ]
     }
   ],
   "manifest_version": 3

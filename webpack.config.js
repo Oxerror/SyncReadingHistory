@@ -18,7 +18,7 @@ module.exports = (env) => ({
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new CopyWebpackPlugin({

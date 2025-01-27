@@ -1,5 +1,36 @@
 {
-    "editor.codeActionsOnSave": {
+    // Unfortunately Prettier is required as a plugin because Prettier ESLint
+    // does not support JavaScript files with the TypeScript parser.
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "eslint.probe": ["typescript", "javascript"],
+    "files.exclude": {
+      "**/bin": true,
+      "**/pkg": true,
+      "**/pkgobj": true,
+      "**/node_modules": true,
+      "**/obj": true,
+      ".vs": true,
+      "packages": true,
+      "**/lib": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "javascript.validate.enable": true,
+    "workbench.settings.useSplitJSON": true,
+    "workbench.settings.editor": "json",
+    "workbench.tree.indent": 24,
+    "npm.packageManager": "npm",
+    "files.insertFinalNewline": true,
+    "[typescript]": {
+      "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
+      }
+    },
+    "[javascript]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+      }
     }
-}
+  }

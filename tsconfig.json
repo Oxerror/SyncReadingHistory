@@ -1,11 +1,26 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist/",
-      "noImplicitAny": true,
-      "module": "es6",
-      "target": "ES6",
-      "jsx": "react",
-      "allowJs": true,
-      "moduleResolution": "node"
-    }
-  }
+	"compilerOptions": {
+		"baseUrl": ".",
+		"allowJs": true,
+		"checkJs": false,
+		"allowSyntheticDefaultImports": true,
+		"allowUnreachableCode": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"lib": ["DOM", "ESNext"],
+		"jsx": "preserve",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": false,
+		"noImplicitThis": true,
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strictNullChecks": true,
+		"target": "ESNext",
+		"outDir": "./dist"
+	}
+}

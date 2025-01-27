@@ -12,13 +12,18 @@ module.exports = (env) => ({
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: {
+          loader: 'ts-loader',
+          options: {
+          compilerOptions: {
+          noEmit: false, // this option will solve the issue
+         }}},
         exclude: /node_modules/,
       },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new CopyWebpackPlugin({

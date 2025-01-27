@@ -12,7 +12,7 @@ function getChapterLocation(url: URL) {
   }
 }
 
-export function getLiteratureInfos(href: string): urlParameters {
+export function getLiteratureInfos(href: string): urlParameters | undefined {
   const url = new URL(href);
   const pathname = url.pathname.split("/");
   const chapterLocation = getChapterLocation(url);

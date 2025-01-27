@@ -1,4 +1,4 @@
-const getLiteratureInfos = require("../src/UrlReading")
+import { getLiteratureInfos } from "../src/UrlReading";
 
 async function run(input, output) {
     const result = getLiteratureInfos(input);

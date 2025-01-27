@@ -12,7 +12,13 @@
     "author": "Fabian Amhof",
     "license": "MIT",
     "devDependencies": {
+        "@babel/core": "^7.26.7",
+        "@babel/preset-env": "^7.26.7",
+        "@babel/preset-typescript": "^7.26.0",
+        "babel-jest": "^29.7.0",
         "copy-webpack-plugin": "^12.0.2",
+        "ts-loader": "^9.5.2",
+        "typescript": "^5.7.3",
         "webpack": "^5.97.1",
         "webpack-cli": "^4.10.0"
     },

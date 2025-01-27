@@ -1,6 +1,6 @@
 console.log("loading plugin");
 
-function getChapterLocation(url) {
+function getChapterLocation(url: URL) {
   var hasNumber = /\d/;
   const urlParts = url.pathname.split("/");
 
@@ -12,7 +12,7 @@ function getChapterLocation(url) {
   }
 }
 
-function getLiteratureInfos(href) {
+export function getLiteratureInfos(href: string) {
   const url = new URL(href);
   const pathname = url.pathname.split("/");
   const chapterLocation = getChapterLocation(url);
@@ -27,5 +27,3 @@ function getLiteratureInfos(href) {
     return { chapter, literatureName }
   }
 }
-
-module.exports = getLiteratureInfos;

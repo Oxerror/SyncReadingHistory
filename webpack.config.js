@@ -12,12 +12,7 @@ module.exports = (env) => ({
     rules: [
       {
         test: /\.tsx?$/,
-        use: {
-          loader: 'ts-loader',
-          options: {
-          compilerOptions: {
-          noEmit: false, // this option will solve the issue
-         }}},
+        use: 'ts-loader',
         exclude: /node_modules/,
       },
     ],

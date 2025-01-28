@@ -1,2 +1,2 @@
-export type urlParameters = { chapter: string | number, literatureName: string }
-export type storageStructure = Record<string, string | number>
+export type urlParameters = { chapter: string, literatureName: string }
+export type storageStructure = Record<string, string>

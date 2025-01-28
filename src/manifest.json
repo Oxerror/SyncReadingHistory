@@ -8,10 +8,18 @@
   "content_scripts": [
     {
       "js": [
-        "main.js"
+        "store.js"
       ],
       "matches": [
         "*://*/*/*"
+      ]
+    },
+    {
+      "js": [
+        "read.js"
+      ],
+      "matches": [
+        "<all_urls>"
       ]
     }
   ],

@@ -3,9 +3,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env) => ({
   mode: env.mode,
-  entry: './src/index.ts',
+  entry: {
+    'store': './src/storeData.ts',
+    'read': './src/updatePage.ts'
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {

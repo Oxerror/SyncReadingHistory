@@ -17,7 +17,7 @@
       "**/lib": true
     },
     "files.trimTrailingWhitespace": true,
-    "javascript.validate.enable": true,
+    "javascript.validate.enable": false,
     "workbench.settings.useSplitJSON": true,
     "workbench.settings.editor": "json",
     "workbench.tree.indent": 24,

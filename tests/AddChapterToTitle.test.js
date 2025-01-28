@@ -20,3 +20,7 @@ it('should remove / from the name', () => {
 it('should transform anything to lowercase', () => {
   runUnifyLiteratureName('IwillfallwiththeEmperor', 'iwillfallwiththeemperor')
 });
+
+it('should remove non ascii characters', () => {
+    runUnifyLiteratureName('‏iwillfallwiththeemperor', 'iwillfallwiththeemperor')
+});

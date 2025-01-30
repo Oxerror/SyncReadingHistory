@@ -5,15 +5,11 @@
   "action": {
     "default_icon": "icon.png"
   },
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "background": {
+    "service_worker": "store.js"
+  },
   "content_scripts": [
-    {
-      "js": [
-        "store.js"
-      ],
-      "matches": [
-        "*://*/*/*"
-      ]
-    },
     {
       "js": [
         "read.js"

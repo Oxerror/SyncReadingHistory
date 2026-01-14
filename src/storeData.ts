@@ -6,14 +6,12 @@ function storeLiteratureInfo(url: string) {
   const values = getLiteratureInfos(url);
 
   chrome.storage.local.get([localStorageKey], (result) => {
-    const storeValues: storageStructure = result[localStorageKey]
-      ? JSON.parse(result[localStorageKey])
-      : {};
+    const storeValues: storageStructure = result[localStorageKey] ?? {};
 
     if (values !== undefined) {
       storeValues[values.literatureName] = values.chapter;
       chrome.storage.local.set({
-        [localStorageKey]: JSON.stringify(storeValues),
+        [localStorageKey]: storeValues,
       });
     }
   });

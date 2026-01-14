@@ -5,7 +5,8 @@ module.exports = (env) => ({
   mode: env.mode,
   entry: {
     'store': './src/storeData.ts',
-    'read': './src/updatePage.ts'
+    'read': './src/updatePage.ts',
+    'popup': './src/popup/popup.ts'
   },
   output: {
     filename: '[name].js',
@@ -27,7 +28,8 @@ module.exports = (env) => ({
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/manifest.json', to: 'manifest.json' },
-        { from: 'src/icon.png', to: 'icon.png' }
+        { from: 'src/icon.png', to: 'icon.png' },
+        { from: 'src/popup/popup.html', to: 'popup.html' }
       ],
     }),
   ],
